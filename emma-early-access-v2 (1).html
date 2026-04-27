@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Emma Early Access</title>
+
+  <!-- MailerLite Universal — replace YOUR_ACCOUNT_ID -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', 'YOUR_ACCOUNT_ID');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet"/>
+
+  <style>
+    :root {
+      --cream:      #FAF8F4;
+      --blue:       #1847D1;   /* royal bright blue */
+      --blue-deep:  #1038A8;
+      --gold:       #C4972A;
+      --gold-light: #E8C96A;
+      --gold-pale:  #F5E9C8;
+      --body-text:  #1A1A1A;
+      --muted:      #6B6B6B;
+      --white:      #FFFFFF;
+      --border:     rgba(196,151,42,0.18);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--body-text);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 18px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ───────────────────────────────────────── */
+    nav {
+      display: flex;
+      justify-content: center;
+      padding: 30px 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .wordmark {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+    .wordmark span { color: var(--gold); }
+
+    /* ── HERO ──────────────────────────────────────── */
+    .hero {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 100px 32px 80px;
+      text-align: center;
+      animation: fadeUp 0.85s ease both;
+    }
+
+    .pill {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-pale);
+      border: 1px solid var(--gold-light);
+      padding: 7px 20px;
+      border-radius: 100px;
+      margin-bottom: 40px;
+    }
+
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1.18;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    h1 .softer {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+      font-style: italic;
+      font-size: 1.08em;
+      color: var(--blue);
+      letter-spacing: 0;
+    }
+
+    .hero-sub {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--blue);
+      letter-spacing: 0.02em;
+      margin: 28px auto 20px;
+      max-width: 580px;
+      line-height: 1.65;
+    }
+
+    .hero-body {
+      font-size: 19px;
+      color: var(--muted);
+      max-width: 540px;
+      margin: 0 auto 52px;
+      line-height: 1.85;
+    }
+
+    /* ── BUTTON ────────────────────────────────────── */
+    .btn,
+    button.ml-onclick-form {
+      display: inline-block;
+      background: var(--blue);
+      color: var(--white) !important;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 18px 48px;
+      border-radius: 3px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.22s, transform 0.18s, box-shadow 0.22s;
+      box-shadow: 0 4px 22px rgba(24,71,209,0.22);
+    }
+    .btn:hover,
+    button.ml-onclick-form:hover {
+      background: var(--blue-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(24,71,209,0.32);
+    }
+
+    /* ── GOLD RULE ─────────────────────────────────── */
+    .rule {
+      width: 52px;
+      height: 1.5px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin: 0 auto;
+    }
+
+    /* ── FORM SECTION ──────────────────────────────── */
+    .form-section {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 80px 32px 100px;
+      text-align: center;
+      animation: fadeUp 1.0s ease 0.15s both;
+    }
+
+    .section-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 1.9rem);
+      font-weight: 700;
+      color: var(--blue);
+      line-height: 1.22;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .form-intro {
+      font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 52px 48px;
+      box-shadow: 0 6px 40px rgba(24,71,209,0.06);
+      text-align: left;
+    }
+
+    .field {
+      margin-bottom: 26px;
+    }
+
+    .field label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid rgba(24,71,209,0.16);
+      border-radius: 4px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 17px;
+      color: var(--body-text);
+      background: var(--cream);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .field input:focus,
+    .field select:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 3px rgba(24,71,209,0.08);
+    }
+
+    .select-wrap { position: relative; }
+    .select-wrap::after {
+      content: '↓';
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+      font-size: 13px;
+      font-family: 'Montserrat', sans-serif;
+      pointer-events: none;
+    }
+
+    .divider-field {
+      height: 1px;
+      background: var(--border);
+      margin: 32px 0;
+    }
+
+    .form-bottom {
+      text-align: center;
+      padding-top: 8px;
+    }
+
+    .form-note {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      color: var(--muted);
+      letter-spacing: 0.06em;
+      margin-top: 18px;
+    }
+
+    /* ── FOOTER ────────────────────────────────────── */
+    footer {
+      text-align: center;
+      padding: 32px;
+      border-top: 1px solid var(--border);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10.5px;
+      letter-spacing: 0.07em;
+      color: var(--muted);
+    }
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── ANIMATION ─────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(22px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── MOBILE ────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .hero       { padding: 72px 24px 60px; }
+      .form-card  { padding: 36px 24px; }
+      .form-section { padding: 60px 24px 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="wordmark">Emma <span>·</span> Early Access</div>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────── -->
+  <section class="hero">
+    <div class="pill">Now Accepting Early Access</div>
+
+    <h1>
+      If your week already feels heavy
+      <span class="softer">before it starts,</span>
+      Emma was built for that.
+    </h1>
+
+    <p class="hero-sub">
+      Join the Emma Early Access List — first access to Emma, an executive-assistant-style AI experience
+      designed to help you start the week with more clarity and less mental weight.
+    </p>
+
+    <p class="hero-body">
+      Emma is not another tool to learn. She is support — the kind that meets you at the start of the week,
+      helps you see what is ahead, and carries some of it with you.
+    </p>
+
+    <button class="ml-onclick-form" onclick="ml('show', '5A5a9o', true)">Join the Emma Early Access List</button>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- ── FORM SECTION ──────────────────────────── -->
+  <section class="form-section">
+    <span class="section-label">Secure Your Spot</span>
+    <h2>Join the Emma Early Access List</h2>
+    <p class="form-intro">
+      A few quick questions so what we send you actually makes sense for where you are right now.
+    </p>
+
+    <div class="form-card">
+
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" placeholder="Your first name"/>
+      </div>
+
+      <div class="field">
+        <label>Email Address</label>
+        <input type="email" placeholder="Your email address"/>
+      </div>
+
+      <div class="divider-field"></div>
+
+      <div class="field">
+        <label>Which best describes you?</label>
+        <div class="select-wrap">
+          <select>
+            <option value="" disabled selected>Select one</option>
+            <option>Full-time employee</option>
+            <option>Employee with a side business</option>
+            <option>Full-time business owner</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>What do you want the most help with?</label>
+        <div class="select-wrap">
+          <select>
+            <option value="" disabled selected>Select one</option>
+            <option>Monday briefing</option>
+            <option>Meeting prep</option>
+            <option>Email drafting</option>
+            <option>Calendar support</option>
+            <option>General AI support</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Do you already use Microsoft Copilot?</label>
+        <div class="select-wrap">
+          <select>
+            <option value="" disabled selected>Select one</option>
+            <option>Yes</option>
+            <option>No</option>
+            <option>A little</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label>Which sounds more like your next step?</label>
+        <div class="select-wrap">
+          <select>
+            <option value="" disabled selected>Select one</option>
+            <option>Copilot 101</option>
+            <option>Emma</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-bottom">
+        <button class="ml-onclick-form" onclick="ml('show', '5A5a9o', true)">Join the Emma Early Access List</button>
+        <p class="form-note">No commitment. No pressure. Just clarity, when it is ready.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Emma &nbsp;·&nbsp; Built by <a href="#">Future Fluent</a> &nbsp;·&nbsp; All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
